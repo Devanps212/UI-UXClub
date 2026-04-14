@@ -39,7 +39,7 @@ const Header = () => {
                   }`}
               >
                 <NavLink
-                  to={`/${text.toLowerCase() === "home" ? "/" : "text.toLowerCase()"}`}
+                  to={`/${text.toLowerCase() === "home" ? "/" : text.toLowerCase()}`}
                   className="h-full flex items-center"
                 >
                   {text}
