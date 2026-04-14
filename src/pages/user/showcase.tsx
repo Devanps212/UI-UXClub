@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type JSX } from "react";
 import { FaArrowRight, FaGithub, FaGlobe, FaBehance, FaDribbble, FaFigma, FaPlus, FaTimes, FaSearch, FaFilter, FaStar, FaHeart, FaEye } from "react-icons/fa";
 
 const categories = ["All", "UI/UX Design", "Web Development", "App Development", "Motion Graphics", "Graphic Design"];
