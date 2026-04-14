@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <h2 className="text-3xl font-bold text-white mb-3">
-              UIUX <span className="text-[#7A38F0]">Club</span>
+              UIUX <span className="text-yellow-500">Club</span>
             </h2>
             <p className="text-white/50 max-w-md">
               Crafting beautiful digital experiences through design and
@@ -74,13 +74,13 @@ const Footer = () => {
           </p>
 
           <div className="flex gap-6 text-white/50">
-            <a href="#" className="hover:text-[#A172F6] transition-colors">
+            <a href="#" className="hover:text-yellow-400 transition-colors">
               <FaInstagram size={20} />
             </a>
-            <a href="#" className="hover:text-[#A172F6] transition-colors">
+            <a href="#" className="hover:text-yellow-400 transition-colors">
               <FaLinkedin size={20} />
             </a>
-            <a href="#" className="hover:text-[#A172F6] transition-colors">
+            <a href="#" className="hover:text-yellow-400 transition-colors">
               <FaDiscord size={20} />
             </a>
           </div>

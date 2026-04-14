@@ -8,7 +8,7 @@ import Testimonials from "../../components/user/home/testimonials";
 
 const Home = () => {
   return (
-    <div className="bg-[#040714] p-16 space-y-36">
+    <div className="bg-white p-16 space-y-36">
       <Hero />
       <Testimonials />
       <Showcase />

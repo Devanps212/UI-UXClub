@@ -25,16 +25,23 @@ const Header = () => {
           <img src="/logo/uiux.png" alt="logo" className="w-20 h-14" />
         </NavLink>
 
-        <nav className="absolute left-1/2 top-0 -translate-x-1/2 h-full ">
-          <ul className="list-none flex items-center gap-10 text-white h-full">
+        <nav className="absolute left-1/2 top-0 -translate-x-1/2 h-full">
+          <ul className="list-none flex items-center gap-10 h-full">
             {NAV_ITEMS.map((text, i) => (
               <li
-                className="h-full flex items-center px-3 text-md font-semibold  
-                       hover:border-b-2 hover:border-purple-500 hover:text-[#8c3dfb]
-                       transition-all duration-100"
+                key={i}
+                className={`h-full flex items-center px-3 text-md font-semibold 
+                  transition-all duration-200
+                  ${
+                    scrolled
+                      ? "text-yellow-500 hover:text-yellow-400 hover:scale-105"
+                      : "hover:border-b-2 hover:border-yellow-500 hover:text-yellow-500"
+                  }`}
               >
-                <NavLink to="#" key={i}>
-                  {" "}
+                <NavLink
+                  to={`/${text.toLowerCase()}`}
+                  className="h-full flex items-center"
+                >
                   {text}
                 </NavLink>
               </li>
@@ -42,7 +49,7 @@ const Header = () => {
           </ul>
         </nav>
 
-        <button className="px-7 py-2 bg-[#6331F2] rounded-md text-white tracking-wider">
+        <button className="px-7 py-2 bg-yellow-500 rounded-md tracking-wider">
           Login/SignUp
         </button>
       </div>

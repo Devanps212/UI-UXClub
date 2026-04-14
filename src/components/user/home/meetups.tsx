@@ -33,13 +33,13 @@ const MonthlyMeetups = () => {
   return (
     <section className="grid grid-cols-2 gap-8 items-center">
       <div>
-        <h1 className="text-5xl font-bold text-white leading-tight mb-3">
+        <h1 className="text-5xl font-bold text-black leading-tight mb-3">
           Monthly
           <br />
-          <span className="text-[#7A38F0]">Meetups</span>
+          <span className="text-yellow-400">Meetups</span>
         </h1>
 
-        <p className="text-white/50 text-sm leading-relaxed mb-8 max-w-xs">
+        <p className="text-black/50 text-sm leading-relaxed mb-8 max-w-xs">
           Connect, collaborate, and learn together. Be part of a thriving design
           community.
         </p>
@@ -52,35 +52,53 @@ const MonthlyMeetups = () => {
           ].map(([num, label], i, arr) => (
             <div key={label} className="flex items-center gap-6">
               <div>
-                <p className="text-2xl font-bold text-[#A172F6]">{num}</p>
-                <p className="text-white/45 text-xs uppercase tracking-wider">
+                <p className="text-2xl font-bold text-yellow-500">{num}</p>
+                <p className="text-black/45 text-xs uppercase tracking-wider">
                   {label}
                 </p>
               </div>
-              {i < arr.length - 1 && <div className="w-px h-8 bg-white/10" />}
+              {i < arr.length - 1 && <div className="w-px h-8 bg-black/10" />}
             </div>
           ))}
         </div>
 
-        <button className="px-6 py-3 bg-[#6331F4] flex items-center gap-2 text-white rounded-xl font-semibold text-sm">
-          Join Community <FaArrowRight className="text-xs" />
-        </button>
+        <div className="flex items-center gap-4">
+          <button
+            className="px-6 py-3 flex items-center gap-2 text-black rounded-xl font-semibold text-sm"
+            style={{
+              background: "linear-gradient(to right, #FFD700, #FFF176)",
+            }}
+          >
+            Join Community <FaArrowRight className="text-xs text-yellow-700" />
+          </button>
+
+          <button className="px-6 py-3 flex items-center gap-2 text-yellow-600 rounded-xl font-semibold text-sm border border-yellow-400 hover:bg-yellow-50 transition">
+            Book Appointment <FaArrowRight className="text-xs" />
+          </button>
+        </div>
       </div>
 
       <div className="flex flex-col gap-3.5">
         {items.map((item) => (
           <div
             key={item.title}
-            className="flex items-start gap-4 bg-white/[0.04] border border-white/[0.08] hover:border-[#7A38F0]/45 transition-colors rounded-2xl px-5 py-4"
+            className="flex items-start gap-4 transition-colors rounded-2xl px-5 py-4"
+            style={{
+              border: "2px solid transparent",
+              backgroundImage:
+                "linear-gradient(white, white), linear-gradient(to right, #FFD700, #FFF176)",
+              backgroundOrigin: "border-box",
+              backgroundClip: "padding-box, border-box",
+            }}
           >
-            <div className="w-10 h-10 rounded-xl bg-[#7A38F0]/15 flex items-center justify-center text-[#A172F6] shrink-0 mt-0.5">
+            <div className="w-10 h-10 rounded-xl bg-yellow-400/15 flex items-center justify-center text-yellow-500 shrink-0 mt-0.5">
               {item.icon}
             </div>
             <div>
-              <p className="text-white font-semibold text-sm mb-1">
+              <p className="text-black font-semibold text-sm mb-1">
                 {item.title}
               </p>
-              <p className="text-white/45 leading-relaxed">{item.desc}</p>
+              <p className="text-black/45 leading-relaxed">{item.desc}</p>
             </div>
           </div>
         ))}

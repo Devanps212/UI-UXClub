@@ -47,9 +47,9 @@ const Showcase = () => {
 
   return (
     <section>
-      <h1 className="text-5xl font-bold text-white max-w-xl">
+      <h1 className="text-5xl font-bold text-black max-w-xl">
         Explore The Creativity of our{" "}
-        <span className="text-[#7A38F0]">Community</span>
+        <span className="text-yellow-500">Community</span>
       </h1>
 
       <div className="relative mt-10">
@@ -60,20 +60,20 @@ const Showcase = () => {
           >
             {ITEMS.map((data, i) => (
               <div key={i} className="w-1/3 shrink-0">
-                <div className="bg-white/10 backdrop-blur-3xl border border-white/20 rounded-2xl overflow-hidden">
+                <div className="bg-yellow-50 border border-yellow-200 rounded-2xl overflow-hidden">
                   <img
                     src={data.thumbnail}
                     alt={data.name}
                     className="w-full h-80 object-cover"
                   />
                   <div className="p-6">
-                    <h1 className="text-2xl font-semibold text-white mb-3">
+                    <h1 className="text-2xl font-semibold text-black mb-3">
                       {data.name}
                     </h1>
-                    <p className="flex items-center gap-3 text-white/80 mb-4">
+                    <p className="flex items-center gap-3 text-yellow-600 mb-4">
                       <FaUser /> {data.creator}
                     </p>
-                    <p className="text-white/70 line-clamp-3">
+                    <p className="text-gray-500 line-clamp-3">
                       {data.description}
                     </p>
                   </div>
@@ -85,14 +85,14 @@ const Showcase = () => {
 
         <button
           onClick={prevSlide}
-          className="absolute -left-5 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-4 rounded-full z-10"
+          className="absolute -left-5 top-1/2 -translate-y-1/2 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 p-4 rounded-full z-10 transition-colors"
         >
           <FaChevronLeft size={28} />
         </button>
 
         <button
           onClick={nextSlide}
-          className="absolute -right-5 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-4 rounded-full z-10"
+          className="absolute -right-5 top-1/2 -translate-y-1/2 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 p-4 rounded-full z-10 transition-colors"
         >
           <FaChevronRight size={28} />
         </button>
