@@ -1,37 +1,30 @@
-import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { HiMenuAlt3 } from "react-icons/hi";
 
 const NAV_ITEMS = ["Home", "Showcase", "Meetups", "Projects"];
 
-const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
+interface HeaderProps {
+  onMenuClick: () => void;
+  scrolled: boolean;
+}
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+const Header = ({ onMenuClick, scrolled }: HeaderProps) => {
   return (
     <header
-      className={`fixed top-0 w-full p-5 transition-all duration-300 z-10 
-        ${scrolled ? "bg-[#040714]" : "bg-transparent"}`}
+      className={`fixed top-0 w-full px-5 py-4 transition-all duration-300 z-[999]
+        ${scrolled ? "bg-[#040714]" : "bg-white"}`}
     >
       <div className="flex items-center justify-between">
-        <NavLink to="#">
+        <NavLink to="/">
           <img src="/logo/uiux.png" alt="logo" className="w-20 h-14" />
         </NavLink>
 
-        <nav className="absolute left-1/2 top-0 -translate-x-1/2 h-full">
+        <nav className="absolute left-1/2 top-0 -translate-x-1/2 h-full hidden md:flex">
           <ul className="list-none flex items-center gap-10 h-full">
             {NAV_ITEMS.map((text, i) => (
               <li
                 key={i}
-                className={`h-full flex items-center px-3 text-md font-semibold 
-                  transition-all duration-200
+                className={`h-full flex items-center px-3 text-md font-semibold transition-all duration-200
                   ${
                     scrolled
                       ? "text-yellow-500 hover:text-yellow-400 hover:scale-105"
@@ -39,7 +32,11 @@ const Header = () => {
                   }`}
               >
                 <NavLink
-                  to={`/${text.toLowerCase() === "home" ? "/" : text.toLowerCase()}`}
+                  to={
+                    text.toLowerCase() === "home"
+                      ? "/"
+                      : `/${text.toLowerCase()}`
+                  }
                   className="h-full flex items-center"
                 >
                   {text}
@@ -49,8 +46,15 @@ const Header = () => {
           </ul>
         </nav>
 
-        <button className="px-7 py-2 bg-yellow-500 rounded-md tracking-wider">
+        <button className="px-7 py-2 bg-yellow-500 rounded-md tracking-wider font-semibold hidden md:block">
           Login/SignUp
+        </button>
+
+        <button
+          className={`md:hidden text-2xl transition-colors duration-300 ${scrolled ? "text-yellow-500" : "text-black"}`}
+          onClick={onMenuClick}
+        >
+          <HiMenuAlt3 />
         </button>
       </div>
     </header>

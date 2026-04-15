@@ -42,37 +42,33 @@ const Testimonials = () => {
   const goToSlide = (index: number) => setCurrentIndex(index);
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <p className="flex items-center justify-center gap-2 text-yellow-600 mb-3">
-            <div className="w-3 h-3 rounded-full bg-yellow-400" />
-            TESTIMONIALS
-          </p>
-          <h2 className="text-4xl font-bold text-black">
+    <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-black">
             What Our Members Say
           </h2>
         </div>
 
-        <div className="relative bg-yellow-50 border border-yellow-300 rounded-3xl p-10 md:p-16">
-          <FaQuoteLeft className="text-6xl text-yellow-400/20 absolute top-8 left-8" />
+        <div className="relative bg-yellow-50 border border-yellow-300 rounded-2xl sm:rounded-3xl px-10 py-8 sm:px-12 sm:py-10 md:px-16 md:py-16">
+          <FaQuoteLeft className="text-4xl sm:text-6xl text-yellow-400/20 absolute top-6 left-6 sm:top-8 sm:left-8" />
 
-          <div className="min-h-70 flex flex-col justify-center">
-            <p className="text-xl md:text-2xl text-gray-800 leading-relaxed text-center mb-10 transition-all duration-500">
+          <div className="min-h-65 sm:min-h-60 flex flex-col justify-center">
+            <p className="text-base sm:text-xl md:text-2xl text-gray-800 leading-relaxed text-center mb-8 sm:mb-10 transition-all duration-500">
               "{testimonials[currentIndex].text}"
             </p>
 
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <img
                 src={testimonials[currentIndex].image}
                 alt={testimonials[currentIndex].name}
-                className="w-16 h-16 rounded-full object-cover border-2 border-yellow-400"
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-yellow-400"
               />
-              <div className="text-center">
-                <h4 className="text-black font-semibold text-lg">
+              <div className="text-center sm:text-left">
+                <h4 className="text-black font-semibold text-base sm:text-lg">
                   {testimonials[currentIndex].name}
                 </h4>
-                <p className="text-yellow-600">
+                <p className="text-yellow-600 text-sm sm:text-base">
                   {testimonials[currentIndex].role}
                 </p>
               </div>
@@ -81,24 +77,24 @@ const Testimonials = () => {
 
           <button
             onClick={goToPrevious}
-            className="absolute left-6 top-1/2 -translate-y-1/2 bg-gray-100 hover:bg-yellow-400 p-4 rounded-full text-gray-700 hover:text-yellow-900 transition-all"
+            className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 bg-gray-100 hover:bg-yellow-400 p-2 sm:p-4 rounded-full text-gray-700 hover:text-yellow-900 transition-all"
           >
-            <FaArrowLeft />
+            <FaArrowLeft className="text-sm sm:text-base" />
           </button>
 
           <button
             onClick={goToNext}
-            className="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-100 hover:bg-yellow-400 p-4 rounded-full text-gray-700 hover:text-yellow-900 transition-all"
+            className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 bg-gray-100 hover:bg-yellow-400 p-2 sm:p-4 rounded-full text-gray-700 hover:text-yellow-900 transition-all"
           >
-            <FaArrowRight />
+            <FaArrowRight className="text-sm sm:text-base" />
           </button>
 
-          <div className="flex justify-center gap-3 mt-10">
+          <div className="flex justify-center gap-3 mt-8 sm:mt-10">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all ${
+                className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all ${
                   currentIndex === index
                     ? "bg-yellow-400 scale-125"
                     : "bg-gray-300 hover:bg-gray-400"

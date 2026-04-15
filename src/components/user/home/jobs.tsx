@@ -41,16 +41,16 @@ const JobOpportunity = () => {
   ];
 
   return (
-    <div>
-      <h1 className="text-5xl font-bold text-black max-w-xl">
+    <div className="z-20">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black max-w-xl z-10">
         Job <span className="text-yellow-400">Opportunity</span>
       </h1>
 
-      <div className="mt-10 space-y-4">
+      <div className="mt-6 sm:mt-8 md:mt-10 space-y-3 sm:space-y-4">
         {opportunities.map((item, index) => (
           <div
             key={index}
-            className={`w-full bg-white/20 backdrop-blur-2xl rounded-2xl overflow-hidden transition-all duration-300 border-4
+            className={`w-full bg-white/20 backdrop-blur-2xl rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300 border-2 sm:border-4
               ${
                 openIndex === index
                   ? "border-yellow-400 shadow-xl"
@@ -58,31 +58,39 @@ const JobOpportunity = () => {
               }`}
           >
             <div
-              className="p-6 flex items-center justify-between cursor-pointer"
+              className="p-4 sm:p-5 md:p-6 flex items-center justify-between cursor-pointer gap-4"
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
             >
-              <h1 className="text-3xl font-semibold text-black tracking-widest">
+              <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold text-black tracking-wide sm:tracking-widest">
                 {item.title}
-              </h1>
+              </h2>
               <FaChevronCircleDown
-                className={`text-4xl text-yellow-400 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}
+                className={`shrink-0 text-2xl sm:text-3xl md:text-4xl text-yellow-400 transition-transform duration-300 ${
+                  openIndex === index ? "rotate-180" : ""
+                }`}
               />
             </div>
 
             {openIndex === index && (
-              <div className="p-6 pt-2 text-black">
-                <p className="text-lg mb-4">{item.description}</p>
+              <div className="px-4 pb-4 pt-0 sm:px-6 sm:pb-6 sm:pt-2 text-black">
+                <p className="text-sm sm:text-base md:text-lg mb-3 sm:mb-4">
+                  {item.description}
+                </p>
 
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6">
                   {item.points.map((point, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="text-yellow-400 mt-1.5">•</span>
-                      <span>{point}</span>
+                    <li key={i} className="flex items-start gap-2 sm:gap-3">
+                      <span className="text-yellow-400 mt-1 sm:mt-1.5 text-xs sm:text-base shrink-0">
+                        •
+                      </span>
+                      <span className="text-sm sm:text-base">{point}</span>
                     </li>
                   ))}
                 </ul>
 
-                <p className="font-medium">{item.footer}</p>
+                <p className="font-medium text-sm sm:text-base">
+                  {item.footer}
+                </p>
               </div>
             )}
           </div>
