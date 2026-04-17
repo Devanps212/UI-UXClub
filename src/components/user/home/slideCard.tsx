@@ -1,4 +1,4 @@
-import type { SLIDES } from "../../../constants/user";
+import type { SLIDES } from "../../../constants";
 
 const SlideCard = ({
   slide,
