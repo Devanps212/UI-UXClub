@@ -1,22 +1,22 @@
 import Flowers from "../../common/decorations/flowers";
-import ContactUs from "../../components/user/home/contactUs";
-import DesignContests from "../../components/user/home/designContests";
+import BuildProjects from "../../components/user/home/buildProjects";
+import GrowCommunity from "../../components/user/home/growCommunity";
+// import ContactUs from "../../components/user/home/contactUs";
+// import DesignContests from "../../components/user/home/designContests";
 import Hero from "../../components/user/home/hero";
-import JobOpportunity from "../../components/user/home/jobs";
-import MonthlyMeetups from "../../components/user/home/meetups";
-import Showcase from "../../components/user/home/showcase";
-import Testimonials from "../../components/user/home/testimonials";
+import LearnDesign from "../../components/user/home/learnDesigns";
+// import JobOpportunity from "../../components/user/home/jobs";
+// import MonthlyMeetups from "../../components/user/home/meetups";
+// import Showcase from "../../components/user/home/showcase";
+// import Testimonials from "../../components/user/home/testimonials";
 
 const Home = () => {
   return (
     <div className="relative overflow-hidden bg-white px-4 py-8 sm:px-8 sm:py-12 md:px-16 md:py-16 space-y-16 sm:space-y-24 md:space-y-36">
-      <div className="absolute z-0 -right-10 sm:-right-20 md:-right-30 top-72 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 border-4 border-dashed border-black bg-yellow-300 rounded-full" />
-      <div className="absolute z-0 -left-20 sm:-left-36 md:-left-52 top-150 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 border-4 border-dashed border-black bg-yellow-300 rounded-full" />
-
       <Hero />
-
+      <div className="absolute z-0 -right-10 sm:-right-20 md:-right-30 top-72 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 border-4 border-dashed border-black bg-yellow-300 rounded-full" />
       <svg
-        className="absolute top-1/5 pointer-events-none hidden sm:block"
+        className="absolute top-1/3 pointer-events-none hidden sm:block"
         style={{ left: 0, width: "100vw" }}
         height="300"
         viewBox="0 0 1440 300"
@@ -33,12 +33,15 @@ const Home = () => {
         />
       </svg>
 
-      <Testimonials />
-      <Showcase />
+      <LearnDesign />
+      {/* <Showcase /> */}
 
       <div className="absolute z-0 -right-20 sm:-right-30 md:-right-40 top-550 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 border-4 border-dashed border-black bg-yellow-300 rounded-full" />
 
-      <JobOpportunity />
+      <BuildProjects />
+      <div className="hidden sm:block absolute -right-10 top-1/2 w-40 h-40 border-[3px] border-dashed border-black/10 rotate-12 pointer-events-none " />
+      <div className="absolute right-24 bottom-1/2 w-16 h-16 border-[3px] border-dashed border-black/10 rotate-45 pointer-events-none" />
+      {/* <JobOpportunity /> */}
 
       <div className="relative">
         <svg
@@ -68,12 +71,13 @@ const Home = () => {
           />
         </svg>
         <div className="relative z-10">
-          <DesignContests />
+          <GrowCommunity />
+          {/* <DesignContests /> */}
         </div>
       </div>
 
-      <MonthlyMeetups />
-      <ContactUs />
+      {/* <MonthlyMeetups /> */}
+      {/* <ContactUs /> */}
       <Flowers left={0} right={0} bottom={0} top={96} />
     </div>
   );

@@ -1,7 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { HiMenuAlt3 } from "react-icons/hi";
 
-const NAV_ITEMS = ["Home", "Showcase", "Meetups", "Projects"];
+const NAV_ITEMS = [
+  "Home",
+  "Events",
+  "Design Resources",
+  "Meetups",
+  // "Projects/Case Studies",
+  // "Community Collaboration",
+];
 
 interface HeaderProps {
   onMenuClick: () => void;
@@ -37,7 +44,7 @@ const Header = ({ onMenuClick, scrolled }: HeaderProps) => {
                       ? "/"
                       : `/${text.toLowerCase()}`
                   }
-                  className="h-full flex items-center"
+                  className="h-full flex items-center text-nowrap"
                 >
                   {text}
                 </NavLink>

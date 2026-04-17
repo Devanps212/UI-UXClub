@@ -22,27 +22,27 @@ const Footer = () => {
             <ul className="space-y-2 text-white/60">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
                   About Us
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Events
+                  Contests
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
                   Join Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  Community Collaboration
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  Projects/Case Studies
                 </a>
               </li>
             </ul>

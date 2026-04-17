@@ -71,7 +71,7 @@ const Showcase = () => {
 
   return (
     <section>
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black max-w-xl">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black max-w-xl z-50">
         Explore The Creativity of our{" "}
         <span className="text-yellow-500">Community</span>
       </h1>

@@ -1,6 +1,6 @@
 const Flowers = ({ left = 0, right = 0, top = 0, bottom = 0 }) => {
   return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 md:z-10">
+    <div className="absolute inset-0 pointer-events-none overflow-hidden md:z-0">
       {/* Left Side */}
       <svg
         className="absolute"
