@@ -4,15 +4,17 @@ import Home from "./pages/user/home";
 import MainLayout from "./layout/mainLayout";
 import Showcase from "./pages/user/showcase";
 import Meetups from "./pages/user/meetups";
+import About from "./pages/user/about";
 
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/showcase" element={<Showcase />} />
-          <Route path="/meetups" element={<Meetups />} />
+          <Route index element={<Home />} />
+          <Route path="showcase" element={<Showcase />} />
+          <Route path="meetups" element={<Meetups />} />
+          <Route path="about" element={<About />} />
         </Route>
       </Routes>
     </Router>

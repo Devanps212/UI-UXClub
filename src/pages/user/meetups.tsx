@@ -1,8 +1,8 @@
-import Ticker from "../../components/meetups/ticker";
-import FeaturedMeetup from "../../components/meetups/featuredMeetups";
-import UpcomingMeetups from "../../components/meetups/upcomingMeetups";
-import PastMeetups from "../../components/meetups/pastMeetups";
-import HostMeetupCTA from "../../components/meetups/hostMeetupCTA";
+import Ticker from "../../components/user/meetups/ticker/ticker";
+import FeaturedMeetup from "../../components/user/meetups/featuredMeetups";
+import UpcomingMeetups from "../../components/user/meetups/upcomingMeetups";
+import PastMeetups from "../../components/user/meetups/pastMeetups";
+import HostMeetupCTA from "../../components/user/meetups/hostMeetupCTA";
 import { UPCOMING_MEETUPS } from "../../constants";
 
 const Meetups = () => {
@@ -11,18 +11,6 @@ const Meetups = () => {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap');
-        .font-display { font-family: 'Bebas Neue', sans-serif; }
-        .font-body { font-family: 'DM Sans', sans-serif; }
-        .ticker-track {
-          display: flex;
-          width: max-content;
-          animation: ticker 22s linear infinite;
-        }
-        @keyframes ticker {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
         .card-lift {
           transition: transform 0.3s cubic-bezier(.22,.68,0,1.2), box-shadow 0.3s ease;
         }

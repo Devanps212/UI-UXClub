@@ -45,6 +45,7 @@ const DesignContests = () => {
         <span className="text-yellow-400">Design</span> Contests
       </h1>
 
+      {/*N */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-4">
         {features.map((f) => (
           <div

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { HiFilter } from "react-icons/hi";
-import { UPCOMING_MEETUPS, FILTERS } from "../../constants";
+import { UPCOMING_MEETUPS, FILTERS } from "../../../constants";
 import MeetupCard from "./meetupCard";
 
 const UpcomingMeetups = () => {

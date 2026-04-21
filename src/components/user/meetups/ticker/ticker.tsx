@@ -1,3 +1,5 @@
+import "./ticker.css";
+
 const Ticker = () => {
   const items = [
     "UI/UX Design",

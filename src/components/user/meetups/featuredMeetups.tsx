@@ -5,7 +5,7 @@ import {
   HiUsers,
   HiArrowRight,
 } from "react-icons/hi";
-import { TAG_COLORS } from "../../constants";
+import { TAG_COLORS } from "../../../constants";
 
 type Meetup = {
   id: number;
@@ -100,5 +100,4 @@ const FeaturedMeetup = ({ meetup }: Props) => {
   );
 };
 
-
-export default FeaturedMeetup
+export default FeaturedMeetup;

@@ -27,7 +27,7 @@ const BuildProjects = () => {
   };
 
   return (
-    <section className="relative h-screen w-full flex flex-col justify-center px-6 sm:px-12 md:px-24 overflow-hidden">
+    <section className="relative w-full flex flex-col justify-center px-6 sm:px-12 md:px-24">
       <span className="absolute left-0 top-1/2 -translate-y-1/2 text-[11rem] font-black text-black/[0.03] select-none leading-none pointer-events-none">
         PROJECTS
       </span>

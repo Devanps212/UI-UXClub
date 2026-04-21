@@ -1,5 +1,5 @@
 import { HiUsers } from "react-icons/hi";
-import { PAST_MEETUPS, TAG_COLORS } from "../../constants";
+import { PAST_MEETUPS, TAG_COLORS } from "../../../constants";
 
 const PastMeetups = () => {
   return (

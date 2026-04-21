@@ -4,7 +4,7 @@ import {
   HiUsers,
   HiArrowRight,
 } from "react-icons/hi";
-import { TAG_COLORS } from "../../constants";
+import { TAG_COLORS } from "../../../constants";
 
 type Meetup = {
   id: number;
