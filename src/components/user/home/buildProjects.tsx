@@ -1,30 +1,18 @@
 const BuildProjects = () => {
   const projects = [
     {
-      title: "Brand Identity Kit",
-      difficulty: "Intermediate",
-      duration: "2 weeks",
-      tags: ["Logo", "Guidelines", "Type"],
+      title: "Collaborate on Live Projects",
+      tags: ["Team Work", "Real Briefs", "Shipping"],
     },
     {
-      title: "App UI from Scratch",
-      difficulty: "Advanced",
-      duration: "3 weeks",
-      tags: ["Figma", "Components", "Flows"],
+      title: "Get Feedback From Peers",
+      tags: ["Critique", "Iteration", "Growth"],
     },
     {
-      title: "Poster Series",
-      difficulty: "Beginner",
-      duration: "1 week",
-      tags: ["Layout", "Print", "Color"],
+      title: "Share What You've Built",
+      tags: ["Portfolio", "Community", "Showcase"],
     },
   ];
-
-  const difficultyColor: Record<string, string> = {
-    Beginner: "bg-black/5 text-black/50",
-    Intermediate: "bg-black text-white",
-    Advanced: "bg-yellow-400 text-black",
-  };
 
   return (
     <section className="relative w-full flex flex-col justify-center px-6 sm:px-12 md:px-24">
@@ -40,8 +28,9 @@ const BuildProjects = () => {
         </h2>
 
         <p className="text-black/50 text-lg sm:text-xl max-w-lg leading-relaxed mb-12">
-          Real briefs. Real deliverables. Build a portfolio that shows what you
-          can actually do — not just what you know.
+          Find people in the community to build with — team up, share ideas, and
+          work on things that actually ship. The best projects come from the
+          right people meeting in the right place.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -50,18 +39,11 @@ const BuildProjects = () => {
               key={i}
               className="group flex-1 border border-black/10 hover:border-black rounded-2xl p-5 cursor-pointer transition-all duration-200 hover:-translate-y-1"
             >
-              <span
-                className={`text-xs font-semibold px-2.5 py-1 rounded-full ${difficultyColor[project.difficulty]}`}
-              >
-                {project.difficulty}
-              </span>
-
               <h3 className="text-black font-bold text-base mt-4 mb-1">
                 {project.title}
               </h3>
-              <p className="text-black/30 text-xs mb-4">{project.duration}</p>
 
-              <div className="flex flex-wrap gap-1.5">
+              <div className="flex flex-wrap gap-1.5 mt-4">
                 {project.tags.map((tag, j) => (
                   <span
                     key={j}
@@ -81,10 +63,10 @@ const BuildProjects = () => {
 
         <div className="flex items-center gap-6">
           <button className="bg-black text-white px-7 py-3 rounded-full text-sm font-semibold hover:bg-yellow-400 hover:text-black transition-colors duration-200">
-            Browse projects →
+            Join the Club →
           </button>
           <span className="text-black/30 text-sm">
-            20+ projects · All levels
+            Real people · Real projects
           </span>
         </div>
       </div>

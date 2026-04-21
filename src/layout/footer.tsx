@@ -2,7 +2,7 @@ import { FaInstagram, FaLinkedin, FaDiscord } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#040714] border-t pt-16 pb-8">
+    <footer className="bg-[#040714] border-t pt-16 pb-8 font-nav">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}

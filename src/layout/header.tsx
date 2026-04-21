@@ -18,7 +18,7 @@ interface HeaderProps {
 const Header = ({ onMenuClick, scrolled }: HeaderProps) => {
   return (
     <header
-      className={`fixed top-0 w-full px-5 py-4 transition-all duration-300 z-[999]
+      className={`fixed top-0 w-full px-5 py-4 transition-all duration-300 z-[999] font-nav
         ${scrolled ? "bg-[#040714]" : "bg-white"}`}
     >
       <div className="flex items-center justify-between">
