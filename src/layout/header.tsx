@@ -4,7 +4,7 @@ import { HiMenuAlt3 } from "react-icons/hi";
 const NAV_ITEMS = [
   "Home",
   "Events",
-  "Design Resources",
+  "Showcase Design",
   "Meetups",
   // "Projects/Case Studies",
   // "Community Collaboration",

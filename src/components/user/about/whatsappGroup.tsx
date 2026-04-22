@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 const WhatsappGroup = () => {
   const WHATSAPP_LINK = "https://chat.whatsapp.com/J3Tx32f2GbJFHLDJYAQqEA";
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center bg-black px-6 md:px-16 lg:px-24 py-14 md:py-20 gap-10 lg:gap-0">
+    <section className="flex flex-col lg:flex-row items-center justify-center bg-black px-6 md:px-16 lg:px-24 py-14 md:py-20 gap-10 lg:gap-0">
       <div className="w-full lg:w-3/4 h-full flex items-center">
         <div>
           <div className="flex items-center gap-2 font-body text-yellow-500 text-sm font-semibold tracking-widest uppercase">
@@ -15,10 +15,6 @@ const WhatsappGroup = () => {
             OUR <span className="text-yellow-400">WHATSAPP</span> <br />
             COMMUNITY <span className="text-yellow-400">GROUP</span>
           </h1>
-          <p className="font-body text-zinc-300 text-base md:text-lg mt-3 font-light max-w-lg">
-            Stay connected with the community through real-time updates,
-            discussions, feedback, and collaboration opportunities
-          </p>
         </div>
       </div>
 
@@ -46,7 +42,7 @@ const WhatsappGroup = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

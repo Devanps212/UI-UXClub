@@ -7,10 +7,10 @@ const MeetTheCrew = () => {
   ];
 
   return (
-    <div className="px-6 md:px-16 lg:px-24 py-10">
+    <section className="px-6 md:px-16 lg:px-24 py-10">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <h1 className="font-display font-extrabold tracking-widest text-4xl sm:text-5xl lg:text-7xl uppercase leading-tight">
-          MEET OUR CREW
+          PEOPLE BEHIND UIUX Club
         </h1>
         <a
           href="#"
@@ -46,7 +46,7 @@ const MeetTheCrew = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

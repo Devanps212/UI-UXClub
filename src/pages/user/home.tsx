@@ -1,14 +1,17 @@
 import Flowers from "../../common/decorations/flowers";
-import BuildProjects from "../../components/user/home/buildProjects";
+import Freelance from "../../components/user/home/freelance";
 import GrowCommunity from "../../components/user/home/growCommunity";
+import Hero from "../../components/user/home/hero";
+import Meetups from "../../components/user/home/learnDesigns";
+import DesignShowcase from "../../components/user/home/showcase";
+// import LearnDesign from "../../components/user/home/learnDesigns";
 // import ContactUs from "../../components/user/home/contactUs";
 // import DesignContests from "../../components/user/home/designContests";
-import Hero from "../../components/user/home/hero";
-import LearnDesign from "../../components/user/home/learnDesigns";
 // import JobOpportunity from "../../components/user/home/jobs";
 // import MonthlyMeetups from "../../components/user/home/meetups";
 // import Showcase from "../../components/user/home/showcase";
 // import Testimonials from "../../components/user/home/testimonials";
+// import BuildProjects from "../../components/user/home/buildProjects";
 
 const Home = () => {
   return (
@@ -16,7 +19,7 @@ const Home = () => {
       <Hero />
       <div className="absolute z-0 -right-10 sm:-right-20 md:-right-30 top-72 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 border-4 border-dashed border-black bg-yellow-300 rounded-full" />
       <svg
-        className="absolute top-1/3 pointer-events-none hidden sm:block"
+        className="absolute top-1/3 translate-y-30 pointer-events-none hidden sm:block"
         style={{ left: 0, width: "100vw" }}
         height="300"
         viewBox="0 0 1440 300"
@@ -33,15 +36,16 @@ const Home = () => {
         />
       </svg>
 
-      <LearnDesign />
+      <Meetups />
       {/* <Showcase /> */}
 
       <div className="absolute z-0 -right-20 sm:-right-30 md:-right-40 top-550 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 border-4 border-dashed border-black bg-yellow-300 rounded-full" />
 
-      <BuildProjects />
+      <Freelance />
       <div className="hidden sm:block absolute -right-10 top-1/2 w-40 h-40 border-[3px] border-dashed border-black/10 rotate-12 pointer-events-none " />
       <div className="absolute right-24 bottom-1/2 w-16 h-16 border-[3px] border-dashed border-black/10 rotate-45 pointer-events-none" />
       {/* <JobOpportunity /> */}
+      <DesignShowcase />
 
       <div className="relative">
         <svg

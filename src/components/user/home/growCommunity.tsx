@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const members = [
   { initials: "AR", name: "Anika R.", role: "Visual Designer", dark: true },
   { initials: "KM", name: "Karan M.", role: "UX Researcher", dark: false },
@@ -13,30 +15,49 @@ const stats = [
 ];
 
 const GrowCommunity = () => {
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap";
+    document.head.appendChild(link);
+
+    const style = document.createElement("style");
+    style.textContent = `
+      .gc-root {
+        font-family: 'DM Sans', sans-serif;
+      }
+      .gc-heading {
+        font-family: 'Bebas Neue', sans-serif;
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      document.head.removeChild(link);
+      document.head.removeChild(style);
+    };
+  }, []);
+
   return (
-    <section className="relative w-full overflow-hidden flex flex-col justify-center px-6 sm:px-12 md:px-24">
-      {/* Large background text */}
-      <span className="absolute right-0 top-1/2 -translate-y-1/2 text-[11rem] font-black text-black/3 select-none leading-none pointer-events-none tracking-tighter whitespace-nowrap">
+    <section className="gc-root relative w-full overflow-hidden flex flex-col justify-center px-6 sm:px-12 md:px-24">
+      <span className="absolute right-0 top-1/2 -translate-y-1/2 text-[11rem] font-extrabold text-black/[0.03] select-none leading-none pointer-events-none">
         COMMUNITY
       </span>
 
-      {/* Dashed decorative squares */}
       <div className="hidden sm:block absolute right-20 top-16 w-28 h-28 border-[3px] border-dashed border-black/10 rotate-12 pointer-events-none" />
       <div className="absolute right-52 bottom-20 w-14 h-14 border-[3px] border-dashed border-black/10 rotate-45 pointer-events-none" />
 
       <div className="relative z-10 max-w-4xl w-full">
-        {/* Heading */}
-        <h2 className="text-5xl sm:text-6xl md:text-7xl font-black leading-[1.05] tracking-tight text-black mb-6">
-          Grow a<br />
-          <span className="text-yellow-400">Community.</span>
+        <h2 className="font-display text-5xl sm:text-6xl md:text-7xl font-black leading-[1.05] tracking-tight text-black mb-6">
+          Grow{" "}
+          <span className="text-yellow-400 tracking-wider">Community.</span>
         </h2>
 
         <p className="text-black/50 text-lg sm:text-xl max-w-lg leading-relaxed mb-10">
-          Real people. Real feedback. Connect with designers at every level,
-          share your work, and build together — not in isolation.
+          Connect, share, and grow with others.
         </p>
 
-        {/* Member pill cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 mb-10">
           {members.map((m, i) => (
             <div
@@ -60,7 +81,6 @@ const GrowCommunity = () => {
           ))}
         </div>
 
-        {/* Stats strip */}
         <div className="flex flex-wrap w-full border border-black/10 rounded-2xl overflow-hidden mb-10">
           {stats.map((s, i) => (
             <div
@@ -71,7 +91,7 @@ const GrowCommunity = () => {
                   : ""
               }`}
             >
-              <div className="text-2xl font-black text-black leading-none">
+              <div className="gc-heading text-2xl text-black leading-none">
                 {s.num.replace("+", "")}
                 <span className="text-yellow-400">+</span>
               </div>
@@ -82,14 +102,10 @@ const GrowCommunity = () => {
           ))}
         </div>
 
-        {/* CTA */}
         <div className="flex items-center gap-6 flex-wrap">
           <button className="bg-black text-white px-7 py-3 rounded-full text-sm font-semibold hover:bg-yellow-400 hover:text-black transition-colors duration-200">
             Join the community →
           </button>
-          <span className="text-black/30 text-sm">
-            Free to join · Open to all levels
-          </span>
         </div>
       </div>
     </section>
