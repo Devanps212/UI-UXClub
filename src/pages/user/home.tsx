@@ -15,7 +15,7 @@ import DesignShowcase from "../../components/user/home/showcase";
 
 const Home = () => {
   return (
-    <div className="relative overflow-hidden bg-white px-4 py-8 sm:px-8 sm:py-12 md:px-16 md:py-16 space-y-16 sm:space-y-24 md:space-y-36">
+    <div className="relative overflow-hidden bg-white space-y-16 sm:space-y-24 md:space-y-36">
       <Hero />
       <div className="absolute z-0 -right-10 sm:-right-20 md:-right-30 top-72 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 border-4 border-dashed border-black bg-yellow-300 rounded-full" />
       <svg

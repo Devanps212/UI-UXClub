@@ -9,8 +9,8 @@ import WhatsappGroup from "../../components/user/about/whatsappGroup";
 
 const About = () => {
   return (
-    <div className="space-y-20">
-      <section className="pt-24 pb-4 px-6 md:px-16 lg:px-24">
+    <section className="space-y-20">
+      <div className="pb-4 px-6 md:px-16 lg:px-24">
         <div className="flex items-center gap-3 mb-2">
           <span className="w-8 h-0.5 bg-yellow-400" />
           <span className="font-body text-yellow-500 text-sm font-semibold tracking-widest uppercase">
@@ -24,7 +24,7 @@ const About = () => {
           A space where UI/UX designers, developers, and creators collaborate,
           learn, build projects and grow the communities
         </p>
-      </section>
+      </div>
       <OurProjects />
       {/* <Process /> */}
       {/* <WhoYouWillFindHere /> */}
@@ -33,7 +33,7 @@ const About = () => {
       <MeetTheCrew />
       {/* <Ticker />
       <GetInTouch /> */}
-    </div>
+    </section>
   );
 };
 

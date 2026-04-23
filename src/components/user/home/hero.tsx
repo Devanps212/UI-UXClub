@@ -84,33 +84,34 @@ const Hero = () => {
 
   return (
     <>
-      <section className="relative overflow-hidden mt-24">
-        <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-evenly">
-          <div className="relative z-10 max-w-xl w-full text-center md:text-left px-4">
-            <p className="font-body flex items-center justify-center md:justify-start gap-2 text-yellow-700 font-medium">
-              <span className="w-3 h-3 rounded-full bg-yellow-500 inline-block" />
+      <section className="relative overflow-hidden mt-16 sm:mt-20 md:mt-24 px-4 sm:px-8 md:px-12 lg:px-16">
+        <div className="flex flex-col items-center gap-8 md:flex-row md:items-center md:justify-between md:gap-4 lg:gap-8 xl:gap-12">
+          <div className="relative z-10 w-full md:w-1/2 lg:max-w-md xl:max-w-xl text-center md:text-left min-w-0">
+            <p className="font-body flex items-center justify-center md:justify-start gap-2 text-yellow-700 font-medium text-sm sm:text-base">
+              <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-500 inline-block" />
               Welcome to UI/UX Club
             </p>
 
-            <h1 className="font-display text-5xl md:text-7xl font-black text-black leading-none mb-4 max-w-3xl text-center md:text-left">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-3xl lg:text-4xl xl:text-6xl font-black text-black leading-none mb-4 mt-2">
               <a href="#">Learn Design.</a>
               <br />
               <a href="#" className="text-yellow-500">
                 Build Projects.
               </a>
-              <br /> & <a href="#">Grow a Community.</a>
+              <br />
+              <span>& </span>
+              <a href="#">Grow a Community.</a>
             </h1>
 
-            <p className="font-body mt-4 text-gray-600 text-base sm:text-lg leading-relaxed">
+            <p className="font-body mt-3 text-gray-600 text-xs md:text-xs lg:text-sm xl:text-base leading-relaxed max-w-lg">
               Join the club of passionate UI/UX designers, where creativity
               meets innovation, ideas are shared, and designers collaborate to
               craft meaningful and user-centered digital experiences.
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-              {/* Join Club button */}
+            <div className="mt-5 sm:mt-6 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3">
               <button
-                className="font-body w-full sm:w-auto px-8 py-3.5 flex items-center justify-center gap-3 text-black font-semibold rounded-2xl transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-yellow-300/50 text-base"
+                className="font-body w-full sm:w-auto px-4 lg:px-6 xl:px-8 py-2.5 flex items-center justify-center gap-2 text-black font-semibold rounded-2xl transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-yellow-300/50 text-sm lg:text-base"
                 style={{
                   background: "linear-gradient(to right, #FFD700, #FFF176)",
                 }}
@@ -118,10 +119,9 @@ const Hero = () => {
                 Join Club <FaArrowRight />
               </button>
 
-              {/* Club Rules button */}
               <button
                 onClick={() => setShowRules(true)}
-                className="font-body w-full sm:w-auto px-8 py-3.5 flex items-center justify-center gap-3 text-black font-semibold rounded-2xl border-2 border-yellow-400 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-yellow-300/40 text-base"
+                className="font-body w-full sm:w-auto px-4 lg:px-6 xl:px-8 py-2.5 flex items-center justify-center gap-2 text-black font-semibold rounded-2xl border-2 border-yellow-400 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-yellow-300/40 text-sm lg:text-base"
                 style={{
                   background: "linear-gradient(to right, #FFF176, #FFD700)",
                 }}
@@ -131,8 +131,8 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative z-10 flex flex-col items-center gap-6">
-            <div className="flex items-center justify-center p-4">
+          <div className="relative z-10 flex flex-col items-center gap-4 sm:gap-6 w-full md:w-1/2 min-w-0 md:scale-[0.72] md:-mx-8 lg:scale-90 lg:mx-0 xl:scale-100 md:origin-center">
+            <div className="flex items-center justify-center w-full overflow-visible">
               <div
                 ref={prevRef}
                 style={{
@@ -191,7 +191,7 @@ const Hero = () => {
                   }}
                   className={`h-1.5 rounded-full transition-all duration-300 ${
                     i === current
-                      ? "w-8 bg-yellow-500"
+                      ? "w-6 sm:w-8 bg-yellow-500"
                       : "w-2 bg-gray-300 hover:bg-gray-400"
                   }`}
                 />
