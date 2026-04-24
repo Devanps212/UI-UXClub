@@ -25,6 +25,7 @@ const TrendingDesigners = () => {
         "https://api.dicebear.com/7.x/initials/svg?seed=Dev Anand&backgroundColor=18181b&textColor=ffffff",
     },
   ];
+
   return (
     <div className="mt-8">
       <div className="flex items-center justify-between">
@@ -35,31 +36,30 @@ const TrendingDesigners = () => {
           View all
         </a>
       </div>
-
       <div className="space-y-5 mt-4">
         {DESIGNERS.map((designer, i) => (
           <div
             key={`designer-${i}`}
-            className="flex items-center justify-between"
+            className="flex items-center justify-between gap-2"
           >
-            <div className="mr-auto flex items-center">
-              <div className="w-10 h-10 rounded-full overflow-hidden">
+            <div className="flex items-center min-w-0">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden flex-shrink-0">
                 <img
                   src={designer.picture}
                   alt={designer.name}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="ml-4 leading-tight ">
-                <h1 className="font-nav text-sm text-zinc-700 hover:text-yellow-400 transition-colors ease-in duration-300">
+              <div className="ml-3 leading-tight min-w-0">
+                <h1 className="font-nav text-sm text-zinc-700 hover:text-yellow-400 transition-colors ease-in duration-300 truncate">
                   {designer.name}
                 </h1>
-                <span className="text-xs font-nav text-zinc-500">
+                <span className="text-xs font-nav text-zinc-500 truncate block">
                   {designer.position}
                 </span>
               </div>
             </div>
-            <button className="text-black text-xs px-3 py-2 bg-zinc-100 border border-zinc-200 rounded-xl">
+            <button className="text-black text-xs px-3 py-2 bg-zinc-100 border border-zinc-200 rounded-xl flex-shrink-0">
               Follow
             </button>
           </div>

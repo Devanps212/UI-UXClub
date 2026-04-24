@@ -1,16 +1,12 @@
 import type { JSX } from "react";
 
 export interface Project {
-  id: number;
   title: string;
-  author: string;
-  category: string;
+  keywords: string[];
+  creator: string;
+  stars: number;
+  comments: number;
   thumbnail: string;
-  description: string;
-  links: Record<string, string>;
-  likes: number;
-  views: number;
-  featured: boolean;
 }
 
 export interface MemberSpotlight {

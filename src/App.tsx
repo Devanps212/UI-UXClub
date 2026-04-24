@@ -4,6 +4,7 @@ import Home from "./pages/user/home";
 import MainLayout from "./layout/mainLayout";
 import Meetups from "./pages/user/meetups";
 import About from "./pages/user/about";
+import Blog from "./pages/user/blog";
 import Showcase from "./pages/user/showcase";
 
 const App = () => {
@@ -12,9 +13,10 @@ const App = () => {
       <Routes>
         <Route element={<MainLayout />}>
           <Route index element={<Home />} />
-          <Route path="showcase" element={<Showcase />} />
+          <Route path="blog" element={<Blog />} />
           <Route path="meetups" element={<Meetups />} />
           <Route path="about" element={<About />} />
+          <Route path="showcase" element={<Showcase />} />
         </Route>
       </Routes>
     </Router>

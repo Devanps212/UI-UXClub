@@ -4,7 +4,7 @@ import Stories from "./stories";
 
 const MainFeed = () => {
   return (
-    <div className="w-1/2 border border-zinc-200 rounded-xl">
+    <div className="w-full sm:flex-1 lg:w-1/2 border border-zinc-200 rounded-xl min-w-0">
       <Stories />
       <div className="w-full h-0.5 bg-zinc-100 mt-5" />
       <FeedSuggestion />
