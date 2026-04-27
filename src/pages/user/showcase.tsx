@@ -6,17 +6,17 @@ import ShowcaseStatistics from "../../components/user/showcase/statistics";
 
 const Showcase = () => {
   return (
-    <div className="space-y-8 py-10">
-      <div className="flex items-center justify-between pb-4 px-6 md:px-16 lg:px-24">
+    <div className="space-y-8 pb-10">
+      <section className="flex items-center justify-between pb-4 px-6 md:px-16 lg:px-24">
         <div>
           <div className="flex items-center gap-3 mb-2">
             <span className="w-8 h-0.5 bg-yellow-400" />
             <span className="font-body text-yellow-500 text-sm font-semibold tracking-widest uppercase">
-              ShowCase
+              Design ShowCase
             </span>
           </div>
-          <h1 className="font-display text-[clamp(4rem,12vw,9rem)] leading-none tracking-wide text-black">
-            SHOWCASE
+          <h1 className="font-display text-[clamp(4rem,12vw,8rem)] leading-none tracking-wide text-black">
+            DESIGN <br /> SHOWCASE
           </h1>
           <p className="font-body text-zinc-600 text-lg max-w-xl mt-2 font-light">
             Share your work, inspire others, and explore what creators like you
@@ -29,15 +29,15 @@ const Showcase = () => {
           bg-white font-semibold font-nav hover:bg-black hover:text-white transition-colors 
           ease-in duration-150 cursor-pointer"
           >
-            + Post Project
+            + Share Project Link
           </button>
           <span className="text-sm text-gray-500 font-nav">
             Share with 2,400+ designers
           </span>
         </div>
-      </div>
-      <CategoryButtons />
+      </section>
       <ShowcaseStatistics />
+      <CategoryButtons />
       <div className="flex items-center gap-3 pb-4 px-6 md:px-16 lg:px-24 divide-x divide-zinc-200">
         <ShowcaseFilter />
         <Projects />

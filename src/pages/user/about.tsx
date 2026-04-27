@@ -9,22 +9,22 @@ import WhatsappGroup from "../../components/user/about/whatsappGroup";
 
 const About = () => {
   return (
-    <section className="space-y-20">
-      <div className="pb-4 px-6 md:px-16 lg:px-24">
+    <div className="space-y-20">
+      <section className="pb-4 px-6 md:px-16 lg:px-24">
         <div className="flex items-center gap-3 mb-2">
           <span className="w-8 h-0.5 bg-yellow-400" />
           <span className="font-body text-yellow-500 text-sm font-semibold tracking-widest uppercase">
             About us
           </span>
         </div>
-        <h1 className="font-display text-[clamp(4rem,12vw,9rem)] leading-none tracking-wide text-black">
+        <h1 className="font-display text-[clamp(4rem,12vw,8rem)] leading-none tracking-wide text-black">
           ABOUT US
         </h1>
         <p className="font-body text-zinc-600 text-lg max-w-xl mt-2 font-light">
           A space where UI/UX designers, developers, and creators collaborate,
           learn, build projects and grow the communities
         </p>
-      </div>
+      </section>
       <OurProjects />
       {/* <Process /> */}
       {/* <WhoYouWillFindHere /> */}
@@ -33,7 +33,7 @@ const About = () => {
       <MeetTheCrew />
       {/* <Ticker />
       <GetInTouch /> */}
-    </section>
+    </div>
   );
 };
 

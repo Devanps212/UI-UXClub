@@ -4,7 +4,7 @@ import { HiMenuAlt3 } from "react-icons/hi";
 const NAV_ITEMS = [
   "Home",
   "Events",
-  "Showcase Design",
+  "Design Showcase",
   "Meetups",
   "Blog",
   // "Projects/Case Studies",
@@ -43,7 +43,7 @@ const Header = ({ onMenuClick, scrolled }: HeaderProps) => {
                   to={
                     text.toLowerCase() === "home"
                       ? "/"
-                      : `/${text.toLowerCase()}`
+                      : `/${text.toLowerCase().replace(/\s+/g, "-")}`
                   }
                   className="h-full flex items-center text-nowrap"
                 >

@@ -26,7 +26,7 @@ const NavigationPanel = () => {
     "Interaction Design",
     "Design Systems",
     "Accessibility",
-    "Graphic Designers",
+    "Graphic Designers+",
   ];
 
   return (

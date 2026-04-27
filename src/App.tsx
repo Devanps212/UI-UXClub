@@ -6,6 +6,7 @@ import Meetups from "./pages/user/meetups";
 import About from "./pages/user/about";
 import Blog from "./pages/user/blog";
 import Showcase from "./pages/user/showcase";
+import Contests from "./pages/user/contests";
 
 const App = () => {
   return (
@@ -16,7 +17,8 @@ const App = () => {
           <Route path="blog" element={<Blog />} />
           <Route path="meetups" element={<Meetups />} />
           <Route path="about" element={<About />} />
-          <Route path="showcase" element={<Showcase />} />
+          <Route path="design-showcase" element={<Showcase />} />
+          <Route path="contests" element={<Contests />} />
         </Route>
       </Routes>
     </Router>

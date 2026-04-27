@@ -9,7 +9,7 @@ const CategoryButtons = () => {
     "Branding",
   ];
   return (
-    <div className="flex shrink items-center justify-start gap-5 w-full pb-4 px-6 md:px-16 lg:px-24">
+    <div className="flex shrink items-center justify-start gap-5 w-full mt-8 pb-4 px-6 md:px-16 lg:px-24">
       {CATEGORIES.map((categ, i) => (
         <button
           key={`category-${i}`}
