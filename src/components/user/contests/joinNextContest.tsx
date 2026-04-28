@@ -5,7 +5,8 @@ const JoinNextContest = () => {
         READY TO COMPETE?
       </span>
       <h1 className="text-4xl sm:text-6xl lg:text-8xl font-display font-extrabold text-white text-center leading-tight">
-        JOIN THE NEXT CONTEST
+        MORE CONTENTS COMING SOON <br />{" "}
+        <span className="text-yellow-400">STAY TUNED</span>
       </h1>
       <p className="text-base sm:text-lg text-gray-300 text-center">
         Be the first to know about new contests

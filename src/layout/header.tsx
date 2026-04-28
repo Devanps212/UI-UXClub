@@ -7,6 +7,7 @@ const NAV_ITEMS = [
   "Design Showcase",
   "Meetups",
   "Blog",
+  "Contests",
   // "Projects/Case Studies",
   // "Community Collaboration",
 ];

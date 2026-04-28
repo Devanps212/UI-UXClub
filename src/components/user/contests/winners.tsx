@@ -4,7 +4,7 @@ const ContestWinners = () => {
   return (
     <div className="mt-5 px-4">
       <h1 className="font-display font-extrabold tracking-widest text-3xl sm:text-5xl lg:text-7xl uppercase leading-tight">
-        MEET THE WINNERS
+        MEET THE CONTEST WINNERS
       </h1>
 
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 py-4 px-6 my-5 bg-black rounded-xl">

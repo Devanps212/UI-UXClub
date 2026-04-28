@@ -5,6 +5,15 @@ import ShowcaseFilter from "../../components/user/showcase/showcaseFilter";
 import ShowcaseStatistics from "../../components/user/showcase/statistics";
 
 const Showcase = () => {
+  const CATEGORIES = [
+    "All",
+    "UI Design",
+    "UX Research",
+    "Prototypes",
+    "Case Studies",
+    "Motion",
+    "Branding",
+  ];
   return (
     <div className="space-y-8 pb-10">
       <section className="flex items-center justify-between pb-4 px-6 md:px-16 lg:px-24">
@@ -37,7 +46,9 @@ const Showcase = () => {
         </div>
       </section>
       <ShowcaseStatistics />
-      <CategoryButtons />
+      <div className="pb-4 px-6 md:px-16 lg:px-24">
+        <CategoryButtons categories={CATEGORIES} />
+      </div>
       <div className="flex items-center gap-3 pb-4 px-6 md:px-16 lg:px-24 divide-x divide-zinc-200">
         <ShowcaseFilter />
         <Projects />

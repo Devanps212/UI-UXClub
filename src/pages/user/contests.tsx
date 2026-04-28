@@ -59,7 +59,7 @@ const Contests = () => {
     },
     {
       id: 3,
-      title: "Landing Page in 48 hrs",
+      title: "Landing Page in 4.8 hrs",
       description:
         "A timed challenge — design a landing page for a given brief in 48 hours.",
       status: "open",
@@ -138,7 +138,7 @@ const Contests = () => {
       <div className="flex items-center gap-3 mb-2">
         <span className="w-8 h-0.5 bg-yellow-400" />
         <span className="font-body text-yellow-500 text-sm font-semibold tracking-widest uppercase">
-          JOIN CONTESTS
+          PARTICIPATE CONTESTS
         </span>
       </div>
 

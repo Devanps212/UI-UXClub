@@ -2,7 +2,14 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { HiX } from "react-icons/hi";
 
-const NAV_ITEMS = ["Home", "Showcase", "Meetups", "Projects"];
+const NAV_ITEMS = [
+  "Home",
+  "Events",
+  "Design Showcase",
+  "Meetups",
+  "Blog",
+  "Contests",
+];
 
 interface SidebarProps {
   isOpen: boolean;
@@ -49,7 +56,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
                     to={
                       text.toLowerCase() === "home"
                         ? "/"
-                        : `/${text.toLowerCase()}`
+                        : `/${text.toLowerCase().replace(/\s+/g, "-")}`
                     }
                     onClick={onClose}
                     className={({ isActive }) =>

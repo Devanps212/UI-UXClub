@@ -7,6 +7,7 @@ import About from "./pages/user/about";
 import Blog from "./pages/user/blog";
 import Showcase from "./pages/user/showcase";
 import Contests from "./pages/user/contests";
+import Events from "./pages/user/events";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="about" element={<About />} />
           <Route path="design-showcase" element={<Showcase />} />
           <Route path="contests" element={<Contests />} />
+          <Route path="events" element={<Events />} />
         </Route>
       </Routes>
     </Router>
